@@ -20,5 +20,13 @@ public class HomeUI : MonoBehaviour
     {
        
     }
+    public void CreditsButtonCall()
+    {
+        UIManager.GetInstance().SpawnNextPanel(nameof(CreditsUI), true);
+    }
 
+    public void OnQuitButtonCall()
+    {
+        UIManager.GetInstance().SpawnNextPanel(nameof(PauseUI), true);
+    }
 }
