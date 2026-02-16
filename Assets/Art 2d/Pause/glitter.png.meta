@@ -1,0 +1,1963 @@
+fileFormatVersion: 2
+guid: f5adb3263b12eb3408a41be3ce2f94bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1254532401911607154
+    second: glitter_0
+  - first:
+      213: -8978750389460304161
+    second: glitter_1
+  - first:
+      213: -5037207304952173735
+    second: glitter_2
+  - first:
+      213: 1536867639102429969
+    second: glitter_3
+  - first:
+      213: 8634895554135179574
+    second: glitter_4
+  - first:
+      213: 884086320217149508
+    second: glitter_5
+  - first:
+      213: -1816334919676338247
+    second: glitter_6
+  - first:
+      213: 175828531865222835
+    second: glitter_7
+  - first:
+      213: -2195841913257859911
+    second: glitter_8
+  - first:
+      213: 1258766870205124337
+    second: glitter_9
+  - first:
+      213: 8829381922963801306
+    second: glitter_10
+  - first:
+      213: 1760362106379827477
+    second: glitter_11
+  - first:
+      213: -1905052896187179126
+    second: glitter_12
+  - first:
+      213: -4926777561645207493
+    second: glitter_13
+  - first:
+      213: -121438163366380986
+    second: glitter_14
+  - first:
+      213: 1990334331123138956
+    second: glitter_15
+  - first:
+      213: 1431598398964944937
+    second: glitter_16
+  - first:
+      213: -3094559776307297807
+    second: glitter_17
+  - first:
+      213: 5877949925049543639
+    second: glitter_18
+  - first:
+      213: -8482160884888590947
+    second: glitter_19
+  - first:
+      213: -8091692656055177206
+    second: glitter_20
+  - first:
+      213: 788516214473071336
+    second: glitter_21
+  - first:
+      213: 1393537512683677807
+    second: glitter_22
+  - first:
+      213: 1209136760765120228
+    second: glitter_23
+  - first:
+      213: -3233232743698503077
+    second: glitter_24
+  - first:
+      213: -4283160748260506162
+    second: glitter_25
+  - first:
+      213: 5628177680367577132
+    second: glitter_26
+  - first:
+      213: -923823148533720465
+    second: glitter_27
+  - first:
+      213: 1784386077387169000
+    second: glitter_28
+  - first:
+      213: 6327651599608193160
+    second: glitter_29
+  - first:
+      213: 7614775286348154851
+    second: glitter_30
+  - first:
+      213: -7007431506821626974
+    second: glitter_31
+  - first:
+      213: -7673722049501673659
+    second: glitter_32
+  - first:
+      213: 4104334032443523137
+    second: glitter_33
+  - first:
+      213: 2141900339584775393
+    second: glitter_34
+  - first:
+      213: 437851055843069741
+    second: glitter_35
+  - first:
+      213: 2467983275927225191
+    second: glitter_36
+  - first:
+      213: 4288420743580410799
+    second: glitter_37
+  - first:
+      213: 219643475425016704
+    second: glitter_38
+  - first:
+      213: 5211693777038596509
+    second: glitter_39
+  - first:
+      213: 1238065427684129944
+    second: glitter_40
+  - first:
+      213: -5745015109163927296
+    second: glitter_41
+  - first:
+      213: 334251227467620313
+    second: glitter_42
+  - first:
+      213: 7154120043179118854
+    second: glitter_43
+  - first:
+      213: 2797831569762475369
+    second: glitter_44
+  - first:
+      213: 7328435258391458222
+    second: glitter_45
+  - first:
+      213: -8514676070256586565
+    second: glitter_46
+  - first:
+      213: 687482080066309590
+    second: glitter_47
+  - first:
+      213: 2305207048642309116
+    second: glitter_48
+  - first:
+      213: -3528362390432281031
+    second: glitter_49
+  - first:
+      213: 1182886206289656789
+    second: glitter_50
+  - first:
+      213: -9084674745290241841
+    second: glitter_51
+  - first:
+      213: -7809774405267800064
+    second: glitter_52
+  - first:
+      213: 7893116328818621542
+    second: glitter_53
+  - first:
+      213: 3839090557205282400
+    second: glitter_54
+  - first:
+      213: -4084139222933796088
+    second: glitter_55
+  - first:
+      213: 3524857551361088120
+    second: glitter_56
+  - first:
+      213: -1574027964944490914
+    second: glitter_57
+  - first:
+      213: 6568900334880451798
+    second: glitter_58
+  - first:
+      213: 6260769323042689998
+    second: glitter_59
+  - first:
+      213: -2082711715119715775
+    second: glitter_60
+  - first:
+      213: -6706587580195124440
+    second: glitter_61
+  - first:
+      213: -1893038935747010866
+    second: glitter_62
+  - first:
+      213: 4908103769221857489
+    second: glitter_63
+  - first:
+      213: 4103539893252587428
+    second: glitter_64
+  - first:
+      213: -6170532730289029101
+    second: glitter_65
+  - first:
+      213: 8495590252821742646
+    second: glitter_66
+  - first:
+      213: -4099785849665014430
+    second: glitter_67
+  - first:
+      213: -619571309657469962
+    second: glitter_68
+  - first:
+      213: -3138252476412615592
+    second: glitter_69
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glitter_0
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 918
+        width: 119
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8057d06d61079ee0800000000000000
+      internalID: -1254532401911607154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_1
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 784
+        width: 236
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde715d9712156380800000000000000
+      internalID: -8978750389460304161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_2
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 960
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ba258f4ae381ab0800000000000000
+      internalID: -5037207304952173735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_3
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 939
+        width: 85
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b5e7f99fc045510800000000000000
+      internalID: 1536867639102429969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_4
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 735
+        width: 268
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631c3d0c1cf45d770800000000000000
+      internalID: 8634895554135179574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_5
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 973
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440535bf2d7e44c00800000000000000
+      internalID: 884086320217149508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_6
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 749
+        width: 283
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfdd8f83051bc6e0800000000000000
+      internalID: -1816334919676338247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 957
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be743f3e1ba07200800000000000000
+      internalID: 175828531865222835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_8
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 941
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4e959f96dc681e0800000000000000
+      internalID: -2195841913257859911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_9
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 949
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe4b999cc9087110800000000000000
+      internalID: 1258766870205124337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_10
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 954
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad443803414488a70800000000000000
+      internalID: 8829381922963801306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_11
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 962
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519f3da42001e6810800000000000000
+      internalID: 1760362106379827477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_12
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 962
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f1f6cfb74ef85e0800000000000000
+      internalID: -1905052896187179126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_13
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 950
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30b5ce29e190abb0800000000000000
+      internalID: -4926777561645207493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_14
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 949
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64afe5242a0905ef0800000000000000
+      internalID: -121438163366380986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_15
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 944
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c810cd667861f9b10800000000000000
+      internalID: 1990334331123138956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 927
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920d25fa82f0ed310800000000000000
+      internalID: 1431598398964944937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_17
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 953
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1cdf4774aed05d0800000000000000
+      internalID: -3094559776307297807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_18
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 935
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbac1a605ca29150800000000000000
+      internalID: 5877949925049543639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_19
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 947
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95a0889d9f494a80800000000000000
+      internalID: -8482160884888590947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_20
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 933
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00b134a66884bf80800000000000000
+      internalID: -8091692656055177206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_21
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 926
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea9d4fb15f51fa00800000000000000
+      internalID: 788516214473071336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_22
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 937
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6821b80cf6d65310800000000000000
+      internalID: 1393537512683677807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_23
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 928
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee75464a77b7c010800000000000000
+      internalID: 1209136760765120228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_24
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 932
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a60b333ff3123d0800000000000000
+      internalID: -3233232743698503077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_25
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 926
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5490c1ef72f84c0800000000000000
+      internalID: -4283160748260506162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_26
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 877
+        width: 10
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28671be7cd4b1e40800000000000000
+      internalID: 5628177680367577132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_27
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 794
+        width: 33
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a5d54bdbbed23f0800000000000000
+      internalID: -923823148533720465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_28
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 931
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec90dceea963c810800000000000000
+      internalID: 1784386077387169000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_29
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 927
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8802411ca9550d750800000000000000
+      internalID: 6327651599608193160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_30
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 768
+        width: 110
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7843337cd1da960800000000000000
+      internalID: 7614775286348154851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_31
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 927
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a34408eb2a90ce90800000000000000
+      internalID: -7007431506821626974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_32
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 901
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547ce5ef376718590800000000000000
+      internalID: -7673722049501673659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_33
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 934
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 140c75b8e0685f830800000000000000
+      internalID: 4104334032443523137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_34
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 931
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e43d35b20f89bd10800000000000000
+      internalID: 2141900339584775393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_35
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 928
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f4e08273f831600800000000000000
+      internalID: 437851055843069741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_36
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 923
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7634f39a6b9004220800000000000000
+      internalID: 2467983275927225191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_37
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 924
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3e68cf1f7838b30800000000000000
+      internalID: 4288420743580410799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_38
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 929
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bb0f1c3945c0300800000000000000
+      internalID: 219643475425016704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_39
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 919
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99df72a0e7a35840800000000000000
+      internalID: 5211693777038596509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_40
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 912
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89cfdc962fd7e2110800000000000000
+      internalID: 1238065427684129944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_41
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 910
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0093805523b9540b0800000000000000
+      internalID: -5745015109163927296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_42
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 916
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df12fe68bf73a400800000000000000
+      internalID: 334251227467620313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_43
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 918
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601913e664a884360800000000000000
+      internalID: 7154120043179118854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_44
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 916
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96dd0193df4e3d620800000000000000
+      internalID: 2797831569762475369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_45
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 904
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1fedf2a05d3b560800000000000000
+      internalID: 7328435258391458222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_46
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 901
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb056de0a3bc5d980800000000000000
+      internalID: -8514676070256586565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_47
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 903
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd8cc33f4d6a8900800000000000000
+      internalID: 687482080066309590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_48
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 898
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb2d04e89dbdff10800000000000000
+      internalID: 2305207048642309116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_49
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 908
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e8f67991db80fc0800000000000000
+      internalID: -3528362390432281031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_50
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 894
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbba97ccb47a6010800000000000000
+      internalID: 1182886206289656789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_51
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 890
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8430ba370cce180800000000000000
+      internalID: -9084674745290241841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_52
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 898
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000431e6e8b1e9390800000000000000
+      internalID: -7809774405267800064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_53
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 892
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cb1164b7bf98d60800000000000000
+      internalID: 7893116328818621542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_54
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 890
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ef6ca7580374530800000000000000
+      internalID: 3839090557205282400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_55
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 863
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b8ac3f3093257c0800000000000000
+      internalID: -4084139222933796088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_56
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 883
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a1bb8744fcae030800000000000000
+      internalID: 3524857551361088120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_57
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 880
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ed3fac7ede72ae0800000000000000
+      internalID: -1574027964944490914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_58
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 875
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc6e711d0c692b50800000000000000
+      internalID: 6568900334880451798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_59
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 880
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec35f904788b2e650800000000000000
+      internalID: 6260769323042689998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_60
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 875
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14aaeb2dab8b813e0800000000000000
+      internalID: -2082711715119715775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_61
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 869
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b4c6bf02a6de2a0800000000000000
+      internalID: -6706587580195124440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_62
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 869
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eced0d02e139ab5e0800000000000000
+      internalID: -1893038935747010866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_63
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 859
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d08935bf561d1440800000000000000
+      internalID: 4908103769221857489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_64
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 851
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aff6fa9ac3b2f830800000000000000
+      internalID: 4103539893252587428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_65
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 840
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3108338bc2ddd5aa0800000000000000
+      internalID: -6170532730289029101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_66
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 811
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63406b8c25666e570800000000000000
+      internalID: 8495590252821742646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_67
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 799
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2653b87cd72aa17c0800000000000000
+      internalID: -4099785849665014430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_68
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 770
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbc7de2d27d667f0800000000000000
+      internalID: -619571309657469962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_69
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 753
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854afe7ffffa274d0800000000000000
+      internalID: -3138252476412615592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      glitter_0: -1254532401911607154
+      glitter_1: -8978750389460304161
+      glitter_10: 8829381922963801306
+      glitter_11: 1760362106379827477
+      glitter_12: -1905052896187179126
+      glitter_13: -4926777561645207493
+      glitter_14: -121438163366380986
+      glitter_15: 1990334331123138956
+      glitter_16: 1431598398964944937
+      glitter_17: -3094559776307297807
+      glitter_18: 5877949925049543639
+      glitter_19: -8482160884888590947
+      glitter_2: -5037207304952173735
+      glitter_20: -8091692656055177206
+      glitter_21: 788516214473071336
+      glitter_22: 1393537512683677807
+      glitter_23: 1209136760765120228
+      glitter_24: -3233232743698503077
+      glitter_25: -4283160748260506162
+      glitter_26: 5628177680367577132
+      glitter_27: -923823148533720465
+      glitter_28: 1784386077387169000
+      glitter_29: 6327651599608193160
+      glitter_3: 1536867639102429969
+      glitter_30: 7614775286348154851
+      glitter_31: -7007431506821626974
+      glitter_32: -7673722049501673659
+      glitter_33: 4104334032443523137
+      glitter_34: 2141900339584775393
+      glitter_35: 437851055843069741
+      glitter_36: 2467983275927225191
+      glitter_37: 4288420743580410799
+      glitter_38: 219643475425016704
+      glitter_39: 5211693777038596509
+      glitter_4: 8634895554135179574
+      glitter_40: 1238065427684129944
+      glitter_41: -5745015109163927296
+      glitter_42: 334251227467620313
+      glitter_43: 7154120043179118854
+      glitter_44: 2797831569762475369
+      glitter_45: 7328435258391458222
+      glitter_46: -8514676070256586565
+      glitter_47: 687482080066309590
+      glitter_48: 2305207048642309116
+      glitter_49: -3528362390432281031
+      glitter_5: 884086320217149508
+      glitter_50: 1182886206289656789
+      glitter_51: -9084674745290241841
+      glitter_52: -7809774405267800064
+      glitter_53: 7893116328818621542
+      glitter_54: 3839090557205282400
+      glitter_55: -4084139222933796088
+      glitter_56: 3524857551361088120
+      glitter_57: -1574027964944490914
+      glitter_58: 6568900334880451798
+      glitter_59: 6260769323042689998
+      glitter_6: -1816334919676338247
+      glitter_60: -2082711715119715775
+      glitter_61: -6706587580195124440
+      glitter_62: -1893038935747010866
+      glitter_63: 4908103769221857489
+      glitter_64: 4103539893252587428
+      glitter_65: -6170532730289029101
+      glitter_66: 8495590252821742646
+      glitter_67: -4099785849665014430
+      glitter_68: -619571309657469962
+      glitter_69: -3138252476412615592
+      glitter_7: 175828531865222835
+      glitter_8: -2195841913257859911
+      glitter_9: 1258766870205124337
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
