@@ -40,6 +40,6 @@ public class HomeUI : MonoBehaviour
     public void OnQuitButtonCall()
     {
         gameManager.SoundManager.PlayButtonClickSound();
-        UIManager.GetInstance().SpawnNextPanel(nameof(PauseUI), true);
+        UIManager.GetInstance().SpawnNextPanel(nameof(QuitPanelUI), true);
     }
 }

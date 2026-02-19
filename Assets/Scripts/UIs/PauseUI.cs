@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class PauseUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameManager gameManager;
     void Start()
     {
-        
+        gameManager = UIManager.GetInstance().GameManager;
     }
     public void ResumeButtonCall()
     {
+        gameManager.SoundManager.PlayButtonClickSound();
        // UIManager.GetInstance().SpawnNextPanel(nameof(GameUI), true);
     }
     public void HomeButtonCall()
     {
+        gameManager.SoundManager.PlayButtonClickSound();
         UIManager.GetInstance().SpawnNextPanel(nameof(HomeUI), true);
     }
 }

@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class QuitPanelUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private GameManager gameManager;
     void Start()
     {
-        
+        gameManager = UIManager.GetInstance().GameManager;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnNoButtonCall() 
     {
-        
+        gameManager.SoundManager.PlayButtonClickSound();
+        UIManager.GetInstance().BackButtonIsPressed();
+    }
+    public void OnYesButtonCall() 
+    {
+        gameManager.SoundManager.PlayButtonClickSound();
+        Application.Quit();
     }
 }
