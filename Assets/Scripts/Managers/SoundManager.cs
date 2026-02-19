@@ -18,6 +18,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioClip buttonClickSound;
     [SerializeField]
+    private AudioClip buttonHoverSound;
+    [SerializeField]
     private AudioClip legionaryAttackOneSound;
     [SerializeField]
     private AudioClip DrakonAttackOneSound;
@@ -37,7 +39,8 @@ public class SoundManager : MonoBehaviour
 		if (IsSoundOn == 1)
 		{
             isSoundOn = true;
-		}
+            Debug.Log("Sound is ON");
+        }
 		else 
 		{
             isSoundOn = false;
@@ -71,7 +74,12 @@ public class SoundManager : MonoBehaviour
 
 	public void PlayButtonClickSound()
 	{
+        Debug.Log("Playing button click sound");
         PlaySound(buttonClickSound, UISoundAudioSource);
+    }
+    public void PlayButtonHoverSound()
+    {
+        PlaySound(buttonHoverSound, UISoundAudioSource);
     }
     public void PlayLegionaryAttackOneSound()
     {

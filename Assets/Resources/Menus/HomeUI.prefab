@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8716896832156421018}
   - component: {fileID: 6343160949714273075}
   - component: {fileID: 362526678261451446}
+  - component: {fileID: 218437781932865394}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -133,6 +134,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &218437781932865394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321109318401663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5efc503fb96d484eb12213c390c79a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverSound
 --- !u!1 &741310717174360636
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +158,7 @@ GameObject:
   - component: {fileID: 2621104645614062003}
   - component: {fileID: 6537049109556646641}
   - component: {fileID: 7091529722453221146}
+  - component: {fileID: 3710784854265436342}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -253,7 +267,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6537049109556646641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38813009164828391}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnNewGameButtonCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3710784854265436342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741310717174360636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5efc503fb96d484eb12213c390c79a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverSound
 --- !u!1 &3782586372461461284
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +653,7 @@ GameObject:
   - component: {fileID: 3261158734120664589}
   - component: {fileID: 2639788601594075666}
   - component: {fileID: 1906261585296506714}
+  - component: {fileID: 8468714673080102030}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -723,7 +762,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2639788601594075666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38813009164828391}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnOptionsButtonCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8468714673080102030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008885143457776368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5efc503fb96d484eb12213c390c79a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverSound
 --- !u!1 &5242975338956803532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1361,7 @@ GameObject:
   - component: {fileID: 2622161432842971266}
   - component: {fileID: 2541352848747196839}
   - component: {fileID: 4365804570593905288}
+  - component: {fileID: 1642712070609260956}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1406,7 +1470,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2541352848747196839}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 38813009164828391}
+        m_TargetAssemblyTypeName: HomeUI, Assembly-CSharp
+        m_MethodName: OnContinueButtonCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1642712070609260956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6957434874796147643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5efc503fb96d484eb12213c390c79a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverSound
 --- !u!1 &8512745527615681972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1567,7 @@ GameObject:
   - component: {fileID: 2249658954390561960}
   - component: {fileID: 4511922461427970404}
   - component: {fileID: 1388906552212052290}
+  - component: {fileID: 3965122834641264888}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1600,3 +1689,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3965122834641264888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8937475428776392558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5efc503fb96d484eb12213c390c79a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButtonHoverSound
