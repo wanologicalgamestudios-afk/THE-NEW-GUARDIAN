@@ -19,7 +19,7 @@ public class HomeUI : MonoBehaviour
     }
     public void OnNewGameButtonCall() 
     {
-        gameManager.SoundManager.PlayButtonClickSound();
+        UIManager.GetInstance().SpawnNextPanel(nameof(GamePlayUI), true);
     }
 
     public void OnContinueButtonCall() 

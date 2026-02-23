@@ -776,8 +776,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: The New Guardian
-  metroPackageVersion: 
+  metroPackageName: TheNewGuardian
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -785,7 +785,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: The New Guardian
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: The New Guardian
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -853,7 +853,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: b95f492f-2a46-4640-a3fc-0b9ef0c6f92a
   framebufferDepthMemorylessMode: 0
