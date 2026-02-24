@@ -11,10 +11,13 @@ public class PauseUI : MonoBehaviour
     {
         gameManager.SoundManager.PlayButtonClickSound();
         UIManager.GetInstance().BackButtonIsPressed();
+        
     }
     public void HomeButtonCall()
     {
         gameManager.SoundManager.PlayButtonClickSound();
         UIManager.GetInstance().RestMenusToHome();
+
+        gameManager.GamePlay.SetActive(false);
     }
 }
