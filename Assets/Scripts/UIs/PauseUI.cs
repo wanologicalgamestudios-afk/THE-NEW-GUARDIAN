@@ -10,11 +10,11 @@ public class PauseUI : MonoBehaviour
     public void ResumeButtonCall()
     {
         gameManager.SoundManager.PlayButtonClickSound();
-       // UIManager.GetInstance().SpawnNextPanel(nameof(GameUI), true);
+        UIManager.GetInstance().BackButtonIsPressed();
     }
     public void HomeButtonCall()
     {
         gameManager.SoundManager.PlayButtonClickSound();
-        UIManager.GetInstance().SpawnNextPanel(nameof(HomeUI), true);
+        UIManager.GetInstance().RestMenusToHome();
     }
 }

@@ -20,6 +20,7 @@ public class HomeUI : MonoBehaviour
     public void OnNewGameButtonCall() 
     {
         UIManager.GetInstance().SpawnNextPanel(nameof(GamePlayUI), true);
+        gameManager.GamePlay.SetActive(true);
     }
 
     public void OnContinueButtonCall() 

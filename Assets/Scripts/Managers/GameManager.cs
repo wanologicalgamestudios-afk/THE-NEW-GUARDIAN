@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     //public RoadmapMetaData RoadmapMetaData => roadmapMetaData;
 
     public SoundManager SoundManager => soundManager;
+    public GameObject GamePlay => gamePlay;
     #endregion
 
     #region APIs responces
@@ -83,6 +84,8 @@ public class GameManager : MonoBehaviour
     private SoundManager soundManager;
     [SerializeField]
     private EnumsManager enumsManager;
+    [SerializeField]
+    private GameObject gamePlay;
     [SerializeField]
     private float playerMetaDataVersion;
 
