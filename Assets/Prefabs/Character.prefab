@@ -68,8 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270a570982d92b642b283a0187d23c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  speed: 5
-  reachThreshold: 0.05
+  walkSpeed: 4
+  rotationSpeed: 180
+  reachThreshold: 0.1
+  defaultAngle: 90
   chatacter: {fileID: 4704009039905212122}
   mainCamera: {fileID: 0}
   animatorController: {fileID: 3214775409160672473}
@@ -120,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalRotation.x
@@ -128,7 +130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalRotation.z
@@ -140,7 +142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -150,14 +152,50 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7937991511953022778, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cfb9c1520c4547545a85039004c5574e, type: 2}
+    - target: {fileID: -7823293702887809713, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 083f5d99d3d08a24a96a8f9aa346e29e, type: 2}
+    - target: {fileID: -4135160321406352845, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7057758966cd2045b250eaf3418c5f7, type: 2}
+    - target: {fileID: -1611572176229920428, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7057758966cd2045b250eaf3418c5f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_Name
       value: Final Rigged_Sam.fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 2021500516931878421, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d0b2c6dcaab52c43a23c0dd59ab396b, type: 2}
+    - target: {fileID: 2321523695958950486, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7057758966cd2045b250eaf3418c5f7, type: 2}
     - target: {fileID: 5866666021909216657, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 52ee2649bf303db4d892caf133869af3, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268137706515917486, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cfb9c1520c4547545a85039004c5574e, type: 2}
+    - target: {fileID: 8815057874582027812, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 53155691b0d70bc4a9a4a9c4ca919f1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

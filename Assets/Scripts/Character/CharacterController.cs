@@ -1,20 +1,24 @@
-﻿using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] float reachThreshold = 0.0f;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] float reachThreshold;
+    [SerializeField] private float defaultAngle;
     [SerializeField] Transform chatacter;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private AnimatorController animatorController;
+  
 
     private Vector3 newPositionTarget;
-   private bool canMove = false;
+    private bool canMove = false;
+   
 
     void Start()
     {
         newPositionTarget = chatacter.position;
+        SetDefaultAngle();
     }
 
     void Update()
@@ -23,20 +27,45 @@ public class CharacterController : MonoBehaviour
         {
             newPositionTarget = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             newPositionTarget.z = chatacter.position.z;
-            AtMouseDown(newPositionTarget);
-            canMove = true;
+            SetDirectionAngle();
+            if (!canMove) 
+            {
+                canMove = true;
+                animatorController.PlayWalkAnimation();
+            }
+     
         }
         Move();
+    }
+
+    private void SetDefaultAngle() 
+    {
+        Quaternion targetRotation = Quaternion.Euler(0f, defaultAngle, 0f);
+        //chatacter.rotation = Quaternion.RotateTowards(
+        //    chatacter.rotation,
+        //    targetRotation,
+        //    rotationSpeed * Time.deltaTime
+        //    );
+        chatacter.rotation = targetRotation;
+    }
+    private void SetDirectionAngle() 
+    {
+        Vector3 dir = newPositionTarget - chatacter.position;
+        // Calculate angle
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        Quaternion rotation = Quaternion.Euler(0f, -1 * angle, 0f);
+        chatacter.rotation = rotation;
     }
 
     private void Move()
     {
         if(!canMove) return;
 
-        chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, speed * Time.deltaTime);
-
+        chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, walkSpeed * Time.deltaTime);
         if (Vector3.Distance(chatacter.position, newPositionTarget) <= reachThreshold)
         {
+            canMove = false;
             OnReachedTarget();
         }
 
@@ -44,9 +73,10 @@ public class CharacterController : MonoBehaviour
 
     private void OnReachedTarget()
     {
-        canMove = false;
         animatorController.PlayIdleAnimation();
-        transform.rotation = Quaternion.identity; // reset rotation to default
+        // reset rotation to default
+        SetDefaultAngle();
+       // transform.rotation = Quaternion.identity; 
     }
 
 
