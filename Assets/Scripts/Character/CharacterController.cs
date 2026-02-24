@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CharacterController : MonoBehaviour
 {
@@ -9,16 +10,29 @@ public class CharacterController : MonoBehaviour
     [SerializeField] Transform chatacter;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private AnimatorController animatorController;
-  
+    [SerializeField] private Collider characterCollider;
+
 
     private Vector3 newPositionTarget;
     private bool canMove = false;
-   
+    Vector3 moveDirection;
+
+
+    Bounds ColliderBounds;
+    Vector3 ScreenmMin;
+    Vector3 ScreenMax;
+    bool outsideLeft;
+    bool outsideRight;
+    bool outsideBottom;
+    bool outsideTop;
 
     void Start()
     {
         newPositionTarget = chatacter.position;
         SetDefaultAngle();
+
+        Bounds bounds = characterCollider.bounds;
+        Debug.Log("ColliderBounds " + bounds);
     }
 
     void Update()
@@ -63,15 +77,48 @@ public class CharacterController : MonoBehaviour
         if(!canMove) return;
 
         chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, walkSpeed * Time.deltaTime);
+
+        CheckForOutsideScreen();
+
         if (Vector3.Distance(chatacter.position, newPositionTarget) <= reachThreshold)
         {
             canMove = false;
-            OnReachedTarget();
+            IdleOnReachedTarget();
         }
 
     }
 
-    private void OnReachedTarget()
+    private void CheckForOutsideScreen()
+    {
+        ColliderBounds = characterCollider.bounds;
+
+        ScreenmMin = Camera.main.WorldToViewportPoint(ColliderBounds.min);
+        ScreenMax = Camera.main.WorldToViewportPoint(ColliderBounds.max);
+
+        moveDirection = newPositionTarget - chatacter.position;
+        moveDirection.Normalize(); 
+
+        outsideLeft = ScreenmMin.x < 0f && moveDirection.x < 0f;
+        outsideRight = ScreenMax.x > 1f && moveDirection.x > 0f;
+        outsideBottom = ScreenmMin.y < 0f && moveDirection.y < 0f;
+        outsideTop = ScreenMax.y > 1f && moveDirection.y > 0f;
+
+        //if (outsideLeft || outsideRight || outsideBottom || outsideTop)
+        //{
+        //    canMove = false;
+        //    IdleOnReachedTarget();
+        //}
+
+        if (outsideLeft || outsideRight) 
+        {
+            newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
+        }
+        if (outsideBottom || outsideTop) 
+        {
+            newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
+        }
+    }
+    private void IdleOnReachedTarget()
     {
         animatorController.PlayIdleAnimation();
         // reset rotation to default

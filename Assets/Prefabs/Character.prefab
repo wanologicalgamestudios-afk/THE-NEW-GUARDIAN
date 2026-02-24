@@ -54,8 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.16, y: 0.63, z: 0.16}
+  m_Center: {x: 0, y: 0.315, z: 0}
 --- !u!114 &266608111546456080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,13 +68,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270a570982d92b642b283a0187d23c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  walkSpeed: 4
+  walkSpeed: 3.5
   rotationSpeed: 180
   reachThreshold: 0.1
   defaultAngle: 90
   chatacter: {fileID: 4704009039905212122}
   mainCamera: {fileID: 0}
   animatorController: {fileID: 3214775409160672473}
+  characterCollider: {fileID: 710428618398892999}
 --- !u!114 &3214775409160672473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,15 +99,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalPosition.x
@@ -114,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.519
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33899d95f4c446a488427030d0fd6b22, type: 3}
       propertyPath: m_LocalPosition.z

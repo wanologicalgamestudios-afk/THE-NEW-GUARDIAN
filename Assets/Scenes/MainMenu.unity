@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &121910432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1314,36 +1314,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 121910432}
     m_Modifications:
     - target: {fileID: 266608111546456080, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: walkSpeed
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 266608111546456080, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 1406023037121834706, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367101602067796397, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367101602067796397, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367101602067796397, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367101602067796397, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2367101602067796397, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4704009039905212122, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,8 +1361,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 710428618398892999, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

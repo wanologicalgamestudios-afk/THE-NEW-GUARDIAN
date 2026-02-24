@@ -79,7 +79,7 @@ namespace TMPro.Examples
                 DrawLinkBounds();
             #endregion
 
-            // Draw Quad around the bounds of the text
+            // Draw Quad around the ColliderBounds of the text
             #region Draw Bounds
             if (ShowMeshBounds)
                 DrawBounds();
@@ -124,7 +124,7 @@ namespace TMPro.Examples
                 Vector3 topRight = m_Transform.TransformPoint(characterInfo.topRight);
                 Vector3 bottomRight = m_Transform.TransformPoint(new Vector3(characterInfo.bottomRight.x, characterInfo.bottomRight.y, 0));
 
-                // Draw character bounds
+                // Draw character ColliderBounds
                 if (characterInfo.isVisible)
                 {
                     Color color = Color.green;
@@ -547,7 +547,7 @@ namespace TMPro.Examples
 
 
         /// <summary>
-        /// Draw Rectangle around the bounds of the text object.
+        /// Draw Rectangle around the ColliderBounds of the text object.
         /// </summary>
         void DrawBounds()
         {
