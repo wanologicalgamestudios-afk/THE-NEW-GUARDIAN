@@ -18,6 +18,6 @@ public class PauseUI : MonoBehaviour
         gameManager.SoundManager.PlayButtonClickSound();
         UIManager.GetInstance().RestMenusToHome();
 
-        gameManager.GamePlay.SetActive(false);
+        gameManager.GamePlay.ExitGame();
     }
 }

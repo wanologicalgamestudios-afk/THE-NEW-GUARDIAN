@@ -37,7 +37,7 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) 
+        if (Input.GetMouseButtonDown(0)) 
         {
             newPositionTarget = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             newPositionTarget.z = chatacter.position.z;
@@ -140,6 +140,11 @@ public class CharacterController : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(-direction);
             transform.rotation = rotation;
         }
+    }
+
+    public void SetCharacterForNewGame() 
+    {
+        canMove = false;
     }
 
 }
