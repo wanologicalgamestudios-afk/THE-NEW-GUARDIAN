@@ -30,6 +30,7 @@ public class HomeUI : MonoBehaviour
     public void OnOptionsButtonCall()
     {
         gameManager.SoundManager.PlayButtonClickSound();
+        UIManager.GetInstance().SpawnNextPanel(nameof(OptionsUI), true);
     }
 
     public void CreditsButtonCall()
