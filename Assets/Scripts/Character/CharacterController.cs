@@ -8,6 +8,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float reachThreshold;
     [SerializeField] private float defaultAngle;
     [SerializeField] Transform chatacter;
+    [SerializeField] Transform chatacterMainBody;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private AnimatorController animatorController;
     [SerializeField] private Collider characterCollider;
@@ -30,9 +31,6 @@ public class CharacterController : MonoBehaviour
     {
         newPositionTarget = chatacter.position;
         SetDefaultAngle();
-
-        Bounds bounds = characterCollider.bounds;
-        Debug.Log("ColliderBounds " + bounds);
     }
 
     void Update()
@@ -54,13 +52,13 @@ public class CharacterController : MonoBehaviour
 
     private void SetDefaultAngle() 
     {
-        Quaternion targetRotation = Quaternion.Euler(0f, defaultAngle, 0f);
-        //chatacter.rotation = Quaternion.RotateTowards(
-        //    chatacter.rotation,
-        //    targetRotation,
-        //    rotationSpeed * Time.deltaTime
-        //    );
-        chatacter.rotation = targetRotation;
+        //Quaternion targetRotation = Quaternion.Euler(0f, defaultAngle, 0f);
+        ////chatacter.rotation = Quaternion.RotateTowards(
+        ////    chatacter.rotation,
+        ////    targetRotation,
+        ////    rotationSpeed * Time.deltaTime
+        ////    );
+        //chatacterMainBody.rotation = targetRotation;
     }
     private void SetDirectionAngle() 
     {
@@ -68,8 +66,9 @@ public class CharacterController : MonoBehaviour
         // Calculate angle
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        Quaternion rotation = Quaternion.Euler(0f, -1 * angle, 0f);
-        chatacter.rotation = rotation;
+        Quaternion rotation = Quaternion.Euler(0f, -1 * angle + 90, 0f);
+       // Quaternion rotation = Quaternion.Euler(0f, angle, 0f);
+        chatacterMainBody.rotation = rotation;
     }
 
     private void Move()

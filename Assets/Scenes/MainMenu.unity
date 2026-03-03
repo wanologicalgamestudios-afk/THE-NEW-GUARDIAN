@@ -306,7 +306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3464664775211479807, guid: 371dcbf8be868874d9c40b89d6288166, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cddd54bbc27bc7b458bfe8b88d3e52fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909816476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 616043e3b41af7049af21c0b74577334, type: 3}
   m_Name: 
@@ -1351,10 +1351,6 @@ PrefabInstance:
     - target: {fileID: 1406023037121834706, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
       propertyPath: m_Name
       value: Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 1406023037121834706, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4704009039905212122, guid: 1f9c42076462872409621fb15a775ee5, type: 3}
       propertyPath: m_LocalPosition.x
