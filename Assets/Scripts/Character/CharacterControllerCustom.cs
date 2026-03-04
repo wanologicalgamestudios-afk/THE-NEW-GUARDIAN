@@ -12,7 +12,7 @@ public class CharacterControllerCustom : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private AnimatorController animatorController;
     [SerializeField] private Collider characterCollider;
-
+    [SerializeField] private float mainCharacterTopPadding;
 
     private Vector3 newPositionTarget;
     private bool canMove = false;
@@ -37,6 +37,12 @@ public class CharacterControllerCustom : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Mouse clicked on UI");
+                return; // stop gameplay click
+            }
+
             newPositionTarget = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             newPositionTarget.z = chatacter.position.z;
             SetDirectionAngle();
@@ -90,7 +96,8 @@ public class CharacterControllerCustom : MonoBehaviour
     private void CheckForOutsideScreen()
     {
         ColliderBounds = characterCollider.bounds;
-
+        ColliderBounds.max = new Vector3(ColliderBounds.max.x, ColliderBounds.max.y + mainCharacterTopPadding, ColliderBounds.max.z);
+  
         ScreenmMin = Camera.main.WorldToViewportPoint(ColliderBounds.min);
         ScreenMax = Camera.main.WorldToViewportPoint(ColliderBounds.max);
 
@@ -102,11 +109,6 @@ public class CharacterControllerCustom : MonoBehaviour
         outsideBottom = ScreenmMin.y < 0f && moveDirection.y < 0f;
         outsideTop = ScreenMax.y > 1f && moveDirection.y > 0f;
 
-        //if (outsideLeft || outsideRight || outsideBottom || outsideTop)
-        //{
-        //    canMove = false;
-        //    IdleOnReachedTarget();
-        //}
 
         if (outsideLeft || outsideRight) 
         {
