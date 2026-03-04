@@ -791,7 +791,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4704009039905212122}
-  - component: {fileID: 710428618398892999}
   - component: {fileID: 266608111546456080}
   - component: {fileID: 3214775409160672473}
   m_Layer: 0
@@ -819,27 +818,6 @@ Transform:
   - {fileID: 2086774769001459020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &710428618398892999
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406023037121834706}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.42, z: 0.1}
-  m_Center: {x: 0, y: 0.21, z: -0.03}
 --- !u!114 &266608111546456080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +840,10 @@ MonoBehaviour:
   animatorController: {fileID: 3214775409160672473}
   characterCollider: {fileID: 954110515969069887}
   mainCharacterTopPadding: 10.5
+  characterMaxPositionOnY: -3.81
+  characterMinPositionOnY: -11.31
+  characterMaxSizeWhileMoving: 12
+  characterMinSizeWhileMoving: 19
 --- !u!114 &3214775409160672473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3140,7 +3122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5775983507081481096
 Transform:
   m_ObjectHideFlags: 0

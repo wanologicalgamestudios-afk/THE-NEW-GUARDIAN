@@ -3,7 +3,9 @@ using UnityEngine.EventSystems;
 
 public class CharacterControllerCustom : MonoBehaviour
 {
-    [SerializeField] private float walkSpeed;
+    [SerializeField] private float walkSpeedMin;
+    [SerializeField] private float walkSpeedMax;
+
     [SerializeField] private float rotationSpeed;
     [SerializeField] float reachThreshold;
     [SerializeField] private float defaultAngle;
@@ -13,12 +15,23 @@ public class CharacterControllerCustom : MonoBehaviour
     [SerializeField] private AnimatorController animatorController;
     [SerializeField] private Collider characterCollider;
     [SerializeField] private float mainCharacterTopPadding;
+    [SerializeField] private float characterMaxPositionOnY;
+    [SerializeField] private float characterMinPositionOnY;
+    [SerializeField] private float characterMaxSizeWhileMoving;
+    [SerializeField] private float characterMinSizeWhileMoving;
 
+
+    #region Move Variables
     private Vector3 newPositionTarget;
     private bool canMove = false;
+    Vector3 newCalculatedPositionX;
+    Vector3 newCalculatedPositionY;
+    #endregion
+
+
+
+    #region CheckForOutsideScreen
     Vector3 moveDirection;
-
-
     Bounds ColliderBounds;
     Vector3 ScreenmMin;
     Vector3 ScreenMax;
@@ -26,32 +39,44 @@ public class CharacterControllerCustom : MonoBehaviour
     bool outsideRight;
     bool outsideBottom;
     bool outsideTop;
+    #endregion
+
+    #region SizeControllOnMove Variables
+    float lerpValue;
+    float updatedCharacterScale;
+    [SerializeField] float currentWalkSpeed;
+    #endregion
+
+
+
 
     void Start()
     {
         newPositionTarget = chatacter.position;
         SetDefaultAngle();
+        SizeControllOnMove();
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                Debug.Log("Mouse clicked on UI");
-                return; // stop gameplay click
-            }
+            if (EventSystem.current.IsPointerOverGameObject()) return;
 
             newPositionTarget = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
+           // if(newPositionTarget.y > characterMaxPositionOnY || newPositionTarget.y < characterMinPositionOnY) return;
+
             newPositionTarget.z = chatacter.position.z;
+
             SetDirectionAngle();
-            if (!canMove) 
+            if (!canMove)
             {
+                Debug.Log("Start Moving");
                 canMove = true;
                 animatorController.PlayWalkAnimation();
             }
-     
+
         }
         Move();
     }
@@ -69,21 +94,28 @@ public class CharacterControllerCustom : MonoBehaviour
     private void SetDirectionAngle() 
     {
         Vector3 dir = newPositionTarget - chatacter.position;
-        // Calculate angle
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
         Quaternion rotation = Quaternion.Euler(0f, -1 * angle + 90, 0f);
-       // Quaternion rotation = Quaternion.Euler(0f, angle, 0f);
+
         chatacterMainBody.rotation = rotation;
+     
     }
 
     private void Move()
     {
         if(!canMove) return;
 
-        chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, walkSpeed * Time.deltaTime);
+        // newCalculatedPositionX = Vector3.MoveTowards(chatacter.position, newPositionTarget, walkSpeedMin * Time.deltaTime);
+        // newCalculatedPositionY = Vector3.MoveTowards(chatacter.position, newPositionTarget, (walkSpeedMin/3.5f) * Time.deltaTime);
+        // chatacter.position = new Vector3(newCalculatedPositionX.x, newCalculatedPositionY.y , chatacter.position.z);
+
 
         CheckForOutsideScreen();
+
+        chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, currentWalkSpeed * Time.deltaTime);
+        chatacterMainBody.localPosition = Vector3.zero;
+
+        SizeControllOnMove();
 
         if (Vector3.Distance(chatacter.position, newPositionTarget) <= reachThreshold)
         {
@@ -92,12 +124,34 @@ public class CharacterControllerCustom : MonoBehaviour
         }
 
     }
+    private void SizeControllOnMove() 
+    {
+        lerpValue = Mathf.InverseLerp(
+            characterMinPositionOnY,
+            characterMaxPositionOnY,
+            chatacter.position.y
+        );
+
+        updatedCharacterScale = Mathf.Lerp(
+            characterMinSizeWhileMoving,
+            characterMaxSizeWhileMoving,
+            lerpValue
+        );
+        transform.localScale = Vector3.one * updatedCharacterScale;
+
+        currentWalkSpeed = Mathf.Lerp(
+            walkSpeedMax,
+            walkSpeedMin,
+            lerpValue
+        );
+    }
 
     private void CheckForOutsideScreen()
     {
         ColliderBounds = characterCollider.bounds;
-        ColliderBounds.max = new Vector3(ColliderBounds.max.x, ColliderBounds.max.y + mainCharacterTopPadding, ColliderBounds.max.z);
-  
+        ColliderBounds.max = new Vector3(ColliderBounds.max.x , ColliderBounds.max.y + mainCharacterTopPadding, ColliderBounds.max.z);
+       // ColliderBounds.min = new Vector3(ColliderBounds.min.x - 0.5f, ColliderBounds.max.y , ColliderBounds.max.z);
+
         ScreenmMin = Camera.main.WorldToViewportPoint(ColliderBounds.min);
         ScreenMax = Camera.main.WorldToViewportPoint(ColliderBounds.max);
 
@@ -146,6 +200,7 @@ public class CharacterControllerCustom : MonoBehaviour
     public void SetCharacterForNewGame() 
     {
         canMove = false;
+       // IdleOnReachedTarget();
     }
 
 }
