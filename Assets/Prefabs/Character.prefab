@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 92102221244274726}
   - component: {fileID: 5326743378978594933}
   - component: {fileID: 4171154405939039975}
+  - component: {fileID: 3512488321882560851}
   m_Layer: 0
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -448,6 +449,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3512488321882560851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799056501027600302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bca0eff4a7579f4eadbc14bcae80099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
+  typewriterEffectDialogieBox: {fileID: 4679210882747675920}
+  dialogueBoxImage: {fileID: 4171154405939039975}
+  alphabetToShowTime: 0.1
 --- !u!1 &910233584157595906
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +860,8 @@ MonoBehaviour:
   chatacterMainBody: {fileID: 2367101602067796397}
   mainCamera: {fileID: 0}
   animatorController: {fileID: 3214775409160672473}
-  characterCollider: {fileID: 710428618398892999}
+  characterCollider: {fileID: 954110515969069887}
+  mainCharacterTopPadding: 10.5
 --- !u!114 &3214775409160672473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bc5c047156bef43a56f31a6a62761b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterUI
-  characterDialogueBox: {fileID: 799056501027600302}
+  characterDialogueBox: {fileID: 3512488321882560851}
   characterDialogueBoxDisplayTime: 5
 --- !u!1 &2842772134578026687
 GameObject:
@@ -1484,7 +1501,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 52ee2649bf303db4d892caf133869af3, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -1676,7 +1693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello, I am Sam. Welcome to the gameplay
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 14e0fe400d110ed42b69541dda01aa86, type: 2}
   m_sharedMaterial: {fileID: 6500512210445920935, guid: 14e0fe400d110ed42b69541dda01aa86, type: 2}

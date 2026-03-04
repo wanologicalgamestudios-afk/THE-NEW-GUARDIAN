@@ -1,19 +1,19 @@
 using UnityEngine;
+using TMPro;
 
 public class CharacterUI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject characterDialogueBox;
+    private DialogueBox characterDialogueBox;
     [SerializeField]
     private float characterDialogueBoxDisplayTime;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        Invoke(nameof(CloseCharacterDialogueBox), characterDialogueBoxDisplayTime);
+        ShowDialogueBox();
     }
-
-    private void CloseCharacterDialogueBox() 
+    private void ShowDialogueBox()
     {
-        characterDialogueBox.SetActive(false);
+        characterDialogueBox.ShowDialogueBox("Hello! I am Same. Welcome to the gameplay.", characterDialogueBoxDisplayTime);
     }
 }

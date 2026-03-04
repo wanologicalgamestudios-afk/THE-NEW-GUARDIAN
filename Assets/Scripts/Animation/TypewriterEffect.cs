@@ -17,10 +17,6 @@ public class TypewriterEffect : MonoBehaviour
         StartCoroutine(Typewriter(text));
     }
 
-    private void Start()
-    {
-        SetText("Hello! I am Same. Welcome to the gameplay.", interpunctuationDelay);
-    }
     public void SetText(string text,float _textShowTime)
     {
         interpunctuationDelay = _textShowTime;
