@@ -80,7 +80,7 @@ public class CharacterControllerCustom : MonoBehaviour
             if (!canMove)
             {
                 canMove = true;
-//animatorController.PlayWalkAnimation();
+                animatorController.PlayWalkAnimation();
             }
         }
         Move();
@@ -234,16 +234,13 @@ public class CharacterControllerCustom : MonoBehaviour
         if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle < obstacle.MainPointFactor && moveDistanceWRTObstacle > 0.0f && moveDirection.y < 0.0f)
         {
             canMoveOnY = false;
-            //newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
         }
-        // if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle >= (-1 * obstacle.MainPointFactor))
-        //{
-        //    canMoveOnY = false;
-        //    // newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
-        //}
+        else if (moveDirectionWRTObstacle.y < 0 && moveDistanceWRTObstacle >= (-1 * obstacle.MainPointFactor) && moveDistanceWRTObstacle < 0.0f && moveDirection.y > 0.0f)
+        {
+            canMoveOnY = false;
+        }
         else 
         {
-            Debug.Log("can move on y");
             canMoveOnY = true;
         }
     }
