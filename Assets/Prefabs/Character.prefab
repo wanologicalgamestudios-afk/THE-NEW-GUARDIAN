@@ -793,9 +793,10 @@ GameObject:
   - component: {fileID: 4704009039905212122}
   - component: {fileID: 266608111546456080}
   - component: {fileID: 3214775409160672473}
+  - component: {fileID: 9130525796329830108}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,7 +831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270a570982d92b642b283a0187d23c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  walkSpeed: 3.5
+  walkSpeedMin: 3
+  walkSpeedMax: 5
   rotationSpeed: 180
   reachThreshold: 0.1
   defaultAngle: 90
@@ -844,6 +846,7 @@ MonoBehaviour:
   characterMinPositionOnY: -11.31
   characterMaxSizeWhileMoving: 12
   characterMinSizeWhileMoving: 19
+  currentWalkSpeed: 0
 --- !u!114 &3214775409160672473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +860,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
   animator: {fileID: 8518996889746508759}
+--- !u!54 &9130525796329830108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406023037121834706}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1547770216139162703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,12 +1537,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.41, z: 0.1}
-  m_Center: {x: 0, y: 0.206, z: 0}
+  m_Center: {x: 0, y: 0.206, z: 0.025}
 --- !u!1 &3500255461070259917
 GameObject:
   m_ObjectHideFlags: 0

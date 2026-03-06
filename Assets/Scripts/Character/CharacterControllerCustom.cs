@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.TextCore.Text;
 
 public class CharacterControllerCustom : MonoBehaviour
 {
@@ -22,13 +24,13 @@ public class CharacterControllerCustom : MonoBehaviour
 
 
     #region Move Variables
+    private Vector3 newMouseInputPosition;
     private Vector3 newPositionTarget;
     private bool canMove = false;
+    private bool canMoveOnY = true;
     Vector3 newCalculatedPositionX;
     Vector3 newCalculatedPositionY;
     #endregion
-
-
 
     #region CheckForOutsideScreen
     Vector3 moveDirection;
@@ -47,6 +49,13 @@ public class CharacterControllerCustom : MonoBehaviour
     [SerializeField] float currentWalkSpeed;
     #endregion
 
+    #region OnTriggerStay
+    private Obstacle obstacle;
+    private Vector3 obstacleMainPoint;
+    private Vector3 moveDirectionWRTObstacle;
+    private float moveDistanceWRTObstacle;
+    #endregion
+
 
 
 
@@ -62,21 +71,17 @@ public class CharacterControllerCustom : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
-
-            newPositionTarget = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-
-           // if(newPositionTarget.y > characterMaxPositionOnY || newPositionTarget.y < characterMinPositionOnY) return;
-
+            newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            newPositionTarget = newMouseInputPosition;
             newPositionTarget.z = chatacter.position.z;
 
             SetDirectionAngle();
+
             if (!canMove)
             {
-                Debug.Log("Start Moving");
                 canMove = true;
-                animatorController.PlayWalkAnimation();
+//animatorController.PlayWalkAnimation();
             }
-
         }
         Move();
     }
@@ -98,22 +103,17 @@ public class CharacterControllerCustom : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0f, -1 * angle + 90, 0f);
 
         chatacterMainBody.rotation = rotation;
-     
+        chatacterMainBody.localPosition = Vector3.zero;
     }
 
     private void Move()
     {
         if(!canMove) return;
 
-        // newCalculatedPositionX = Vector3.MoveTowards(chatacter.position, newPositionTarget, walkSpeedMin * Time.deltaTime);
-        // newCalculatedPositionY = Vector3.MoveTowards(chatacter.position, newPositionTarget, (walkSpeedMin/3.5f) * Time.deltaTime);
-        // chatacter.position = new Vector3(newCalculatedPositionX.x, newCalculatedPositionY.y , chatacter.position.z);
-
-
         CheckForOutsideScreen();
 
         chatacter.position = Vector3.MoveTowards(chatacter.position, newPositionTarget, currentWalkSpeed * Time.deltaTime);
-        chatacterMainBody.localPosition = Vector3.zero;
+       
 
         SizeControllOnMove();
 
@@ -150,12 +150,11 @@ public class CharacterControllerCustom : MonoBehaviour
     {
         ColliderBounds = characterCollider.bounds;
         ColliderBounds.max = new Vector3(ColliderBounds.max.x , ColliderBounds.max.y + mainCharacterTopPadding, ColliderBounds.max.z);
-       // ColliderBounds.min = new Vector3(ColliderBounds.min.x - 0.5f, ColliderBounds.max.y , ColliderBounds.max.z);
 
         ScreenmMin = Camera.main.WorldToViewportPoint(ColliderBounds.min);
         ScreenMax = Camera.main.WorldToViewportPoint(ColliderBounds.max);
 
-        moveDirection = newPositionTarget - chatacter.position;
+        moveDirection = newMouseInputPosition - chatacter.position;
         moveDirection.Normalize(); 
 
         outsideLeft = ScreenmMin.x < 0f && moveDirection.x < 0f;
@@ -164,11 +163,11 @@ public class CharacterControllerCustom : MonoBehaviour
         outsideTop = ScreenMax.y > 1f && moveDirection.y > 0f;
 
 
-        if (outsideLeft || outsideRight) 
+        if (outsideLeft || outsideRight)
         {
             newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
         }
-        if (outsideBottom || outsideTop) 
+        if (outsideBottom || outsideTop || !canMoveOnY)
         {
             newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
         }
@@ -203,4 +202,53 @@ public class CharacterControllerCustom : MonoBehaviour
        // IdleOnReachedTarget();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        obstacle = other.GetComponent<Obstacle>();
+        obstacleMainPoint = obstacle.MainPointPoition;
+        //
+
+        //moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
+        //// Left / Right
+        //if (chatacter.position.x > obstacleMainPoint.x && moveDistanceWRTObstacle < (2*obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
+        //{
+        //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
+        //}
+        //else if (chatacter.position.x < obstacleMainPoint.x && moveDistanceWRTObstacle < (2 * obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
+        //{
+        //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
+        //}
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        moveDirectionWRTObstacle = chatacter.position - obstacleMainPoint;
+        moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
+
+        newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        moveDirection = newMouseInputPosition - chatacter.position;
+        moveDirection.Normalize();
+
+
+
+        if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle < obstacle.MainPointFactor && moveDistanceWRTObstacle > 0.0f && moveDirection.y < 0.0f)
+        {
+            canMoveOnY = false;
+            //newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
+        }
+        // if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle >= (-1 * obstacle.MainPointFactor))
+        //{
+        //    canMoveOnY = false;
+        //    // newPositionTarget = new Vector3(newPositionTarget.x, chatacter.position.y, newPositionTarget.z);
+        //}
+        else 
+        {
+            Debug.Log("can move on y");
+            canMoveOnY = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        canMoveOnY = true;
+    }
 }
