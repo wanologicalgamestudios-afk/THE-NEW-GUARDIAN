@@ -5,7 +5,7 @@ public class Obstacle : MonoBehaviour
     [SerializeField] Transform mainPoint;
     [SerializeField] float mainPointFactor;
     [SerializeField] Collider obstacleCollider;
-    [SerializeField] bool isObstacleColliderOn =  true;
+    [SerializeField] bool isObstacleColliderOn = true;
 
     Vector3 mainPointPosition;
     Vector3 playerPosition;

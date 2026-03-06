@@ -184,8 +184,7 @@ public class CharacterControllerCustom : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        obstacle = other.GetComponent<Obstacle>();
-        obstacleMainPoint = obstacle.MainPointPoition;
+  
         //
 
         //moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
@@ -202,8 +201,15 @@ public class CharacterControllerCustom : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+
+        obstacle = other.GetComponent<Obstacle>();
+        obstacleMainPoint = obstacle.MainPointPoition;
+
+
         moveDirectionWRTObstacle = chatacter.position - obstacleMainPoint;
         moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
+
+        if (Mathf.Abs(moveDirectionWRTObstacle.y) > 1) return;
 
         newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         moveDirection = newMouseInputPosition - chatacter.position;
@@ -226,6 +232,6 @@ public class CharacterControllerCustom : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        canMoveOnY = true;
+       canMoveOnY = true;
     }
 }
