@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AnimatorController : MonoBehaviour
@@ -5,7 +6,8 @@ public class AnimatorController : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
-  
+
+    Action callbackOnYawnAnimationend;
     public void PlayIdleAnimation()
     {
         if (animator != null)
@@ -29,5 +31,33 @@ public class AnimatorController : MonoBehaviour
         }
     }
 
+    public void PlayYawnAnimation(Action _callbackOnAnimationEnd)
+    {
+        if (animator != null)
+        {
+            callbackOnYawnAnimationend = _callbackOnAnimationEnd;
+            animator.SetTrigger("yawn");
+        }
+        else
+        {
+            Debug.LogWarning("Animator component is not assigned.");
+        }
+    }
 
+    public void PlaySittingAnimation()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("sit");
+        }
+        else
+        {
+            Debug.LogWarning("Animator component is not assigned.");
+        }
+    }
+
+    public void OnYawnAnimationEnd() 
+    {
+        callbackOnYawnAnimationend?.Invoke();
+    }
 }

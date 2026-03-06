@@ -654,7 +654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4704009039905212122}
   - component: {fileID: 266608111546456080}
-  - component: {fileID: 3214775409160672473}
   - component: {fileID: 9130525796329830108}
   m_Layer: 0
   m_Name: Character
@@ -662,7 +661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4704009039905212122
 Transform:
   m_ObjectHideFlags: 0
@@ -673,7 +672,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.5, y: 5.5, z: 5.5}
+  m_LocalScale: {x: 7.3910956, y: 7.3910956, z: 7.3910956}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8797729336698431213}
@@ -701,27 +700,13 @@ MonoBehaviour:
   chatacter: {fileID: 4704009039905212122}
   chatacterMainBody: {fileID: 8020713124938773142}
   mainCamera: {fileID: 0}
-  animatorController: {fileID: 3214775409160672473}
+  animatorController: {fileID: 2058690792347795793}
   characterCollider: {fileID: 6120161662528061750}
   mainCharacterTopPadding: 10.5
   characterMaxPositionOnY: -3.81
   characterMinPositionOnY: -11.31
   characterMaxSizeWhileMoving: 5.5
   characterMinSizeWhileMoving: 8
-  currentWalkSpeed: 0
---- !u!114 &3214775409160672473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406023037121834706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b41bd39e93304ee4c854d93c50e8d003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
-  animator: {fileID: 2020038590930153816}
 --- !u!54 &9130525796329830108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1990,6 +1975,7 @@ GameObject:
   - component: {fileID: 8020713124938773142}
   - component: {fileID: 2020038590930153816}
   - component: {fileID: 6120161662528061750}
+  - component: {fileID: 2058690792347795793}
   m_Layer: 0
   m_Name: Sam
   m_TagString: Player
@@ -2075,6 +2061,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22, y: 0.91, z: 0.25}
   m_Center: {x: 0, y: 0.46, z: 0.04}
+--- !u!114 &2058690792347795793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051451069450916968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41bd39e93304ee4c854d93c50e8d003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
+  animator: {fileID: 2020038590930153816}
 --- !u!1 &3062098698690351622
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,13 +6,16 @@ public class GamePlay : MonoBehaviour
     [SerializeField] GameObject environment;
     [SerializeField] CharacterControllerCustom mainCharacterController;
 
+    [SerializeField] DormitoryGamePlay dormitoryGamePlay;
+
 
     private void StartGame() 
     {
         Debug.Log("StartGame");
         mainCharacter.SetActive(true);
-        environment.SetActive(true);
+       // environment.SetActive(true);
         mainCharacterController.SetCharacterForNewGame();
+        dormitoryGamePlay.gameObject.SetActive(true);
     }
 
     public void ExitGame() 

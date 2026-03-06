@@ -28,25 +28,23 @@ public class CharacterControllerCustom : MonoBehaviour
     private Vector3 newPositionTarget;
     private bool canMove = false;
     private bool canMoveOnY = true;
-    Vector3 newCalculatedPositionX;
-    Vector3 newCalculatedPositionY;
     #endregion
 
     #region CheckForOutsideScreen
-    Vector3 moveDirection;
-    Bounds ColliderBounds;
-    Vector3 ScreenmMin;
-    Vector3 ScreenMax;
-    bool outsideLeft;
-    bool outsideRight;
-    bool outsideBottom;
-    bool outsideTop;
+    private Vector3 moveDirection;
+    private Bounds ColliderBounds;
+    private Vector3 ScreenmMin;
+    private Vector3 ScreenMax;
+    private bool outsideLeft;
+    private bool outsideRight;
+    private bool outsideBottom;
+    private bool outsideTop;
     #endregion
 
     #region SizeControllOnMove Variables
-    float lerpValue;
-    float updatedCharacterScale;
-    [SerializeField] float currentWalkSpeed;
+    private float lerpValue;
+    private float updatedCharacterScale;
+    private float currentWalkSpeed;
     #endregion
 
     #region OnTriggerStay
@@ -57,7 +55,7 @@ public class CharacterControllerCustom : MonoBehaviour
     #endregion
 
 
-
+    public AnimatorController AnimatorController => animatorController;
 
     void Start()
     {
@@ -175,25 +173,7 @@ public class CharacterControllerCustom : MonoBehaviour
     private void IdleOnReachedTarget()
     {
         animatorController.PlayIdleAnimation();
-        // reset rotation to default
         SetDefaultAngle();
-       // transform.rotation = Quaternion.identity; 
-    }
-
-
-    private void AtMouseDown(Vector3 _clickPosition)
-    {
-        animatorController.PlayWalkAnimation();
-
-        Vector3 direction = _clickPosition - transform.position;
-
-        direction.y = 0f; // keep upright
-
-        if (direction != Vector3.zero)
-        {
-            Quaternion rotation = Quaternion.LookRotation(-direction);
-            transform.rotation = rotation;
-        }
     }
 
     public void SetCharacterForNewGame() 

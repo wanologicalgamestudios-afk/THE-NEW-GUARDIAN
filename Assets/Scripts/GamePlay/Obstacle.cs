@@ -4,12 +4,19 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField] Transform mainPoint;
     [SerializeField] float mainPointFactor;
+    [SerializeField] Collider obstacleCollider;
+    [SerializeField] bool isObstacleColliderOn =  true;
 
     Vector3 mainPointPosition;
     Vector3 playerPosition;
 
     public Vector3 MainPointPoition => mainPointPosition;
     public float MainPointFactor => mainPointFactor;
+
+    private void Start()
+    {
+        obstacleCollider.enabled = isObstacleColliderOn;
+    }
 
     private void OnTriggerEnter(Collider other) 
     {
@@ -31,5 +38,10 @@ public class Obstacle : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetObstacleForNewGame() 
+    {
+        obstacleCollider.enabled = true;
     }
 }
