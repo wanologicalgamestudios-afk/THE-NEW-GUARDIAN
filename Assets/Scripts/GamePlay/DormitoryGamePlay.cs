@@ -15,6 +15,7 @@ public class DormitoryGamePlay : MonoBehaviour
     [SerializeField] float timeToStartYawnAnimation;
     [SerializeField] float timeToStartGame;
     [SerializeField] Obstacle samBed;
+    [SerializeField] Sprite mouseIcon;
 
     private GamePlayUI gamePlayUI;
 
@@ -109,6 +110,7 @@ public class DormitoryGamePlay : MonoBehaviour
 
     private void StartGameplay() 
     {
+        UIManager.GetInstance().ActiveMessagePanel(mouseIcon, "Click", "anywhere to move Sam",5.0f);
         characterController.AnimatorController.PlayIdleAnimation();
         characterController.transform.position = characterPositionAtGameStart;
         samBed.SetObstacleForNewGame();

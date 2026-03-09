@@ -1,16 +1,11 @@
-public class EnumsManager
+using UnityEngine;
+
+public class EnumsManager : MonoBehaviour
 {
-    public enum AuthProvider
+    public enum CursorIcon
     {
-        None,
-        Google,
-        Facebook,
-        Apple
+        Default,
+        Interact,
     }
-    public enum CharacterTypes
-    {
-        None,
-        Drakon,
-        Legionary
-    }
+
 }

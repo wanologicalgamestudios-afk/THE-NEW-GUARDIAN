@@ -298,9 +298,13 @@ public class UIManager : MonoBehaviour
     {
         warningsPanelUI.InactiveLoadingPanel();
     }
-    public void ActiveMessagePanel(string _message, float _duration = 3.0f)
+    public void ActiveWarningMessagePanel(string _message, float _duration = 3.0f)
     {
         warningsPanelUI.ActiveWarningMessagePanel(_message, _duration);
+    }
+    public void ActiveMessagePanel(Sprite _icon, string _heading, string _message, float duration)
+    {
+        warningsPanelUI.ActiveMessagePanel(_icon,_heading,_message,duration);
     }
     public void InactiveMessagePanel()
     {

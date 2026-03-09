@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     public SoundManager SoundManager => soundManager;
     public GamePlay GamePlay => gamePlay;
+    public CursorIconController CursorIconController => cursorIconController;
     #endregion
 
     #region APIs responces
@@ -81,9 +82,9 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField]
-    private SoundManager soundManager;
+    private CursorIconController cursorIconController;
     [SerializeField]
-    private EnumsManager enumsManager;
+    private SoundManager soundManager;
     [SerializeField]
     private GamePlay gamePlay;
     [SerializeField]

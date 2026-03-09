@@ -47,7 +47,7 @@ public class WarningsPanelUI : MonoBehaviour
         warningMessageAnimator.SetBool("canHide", true);
     }
 
-    public void ActiveMessagePanel(string _heading,string _message, float duration)
+    public void ActiveMessagePanel(Sprite _icon, string _heading,string _message, float duration)
     {
         CancelInvoke(nameof(DisactiveMessage));
         messageAnimator.SetTrigger("show");

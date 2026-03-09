@@ -184,54 +184,57 @@ public class CharacterControllerCustom : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-  
-        //
-
-        //moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
-        //// Left / Right
-        //if (chatacter.position.x > obstacleMainPoint.x && moveDistanceWRTObstacle < (2*obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
-        //{
-        //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
-        //}
-        //else if (chatacter.position.x < obstacleMainPoint.x && moveDistanceWRTObstacle < (2 * obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
-        //{
-        //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
-        //}
+        if (other.CompareTag("Obstacle"))
+        {
+            //moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
+            //// Left / Right
+            //if (chatacter.position.x > obstacleMainPoint.x && moveDistanceWRTObstacle < (2*obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
+            //{
+            //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
+            //}
+            //else if (chatacter.position.x < obstacleMainPoint.x && moveDistanceWRTObstacle < (2 * obstacle.MainPointFactor) && moveDistanceWRTObstacle > 0.0f)
+            //{
+            //  //  newPositionTarget = new Vector3(chatacter.position.x, newPositionTarget.y, newPositionTarget.z);
+            //}
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-
-        obstacle = other.GetComponent<Obstacle>();
-        obstacleMainPoint = obstacle.MainPointPoition;
-
-
-        moveDirectionWRTObstacle = chatacter.position - obstacleMainPoint;
-        moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
-
-        if (Mathf.Abs(moveDirectionWRTObstacle.y) > 1) return;
-
-        newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        moveDirection = newMouseInputPosition - chatacter.position;
-        moveDirection.Normalize();
-
-
-
-        if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle < obstacle.MainPointFactor && moveDistanceWRTObstacle > 0.0f && moveDirection.y < 0.0f)
+        if (other.CompareTag("Obstacle")) 
         {
-            canMoveOnY = false;
+            obstacle = other.GetComponent<Obstacle>();
+            obstacleMainPoint = obstacle.MainPointPoition;
+
+            moveDirectionWRTObstacle = chatacter.position - obstacleMainPoint;
+            moveDistanceWRTObstacle = chatacter.position.y - obstacleMainPoint.y;
+
+            if (Mathf.Abs(moveDirectionWRTObstacle.y) > 1) return;
+
+            newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            moveDirection = newMouseInputPosition - chatacter.position;
+            moveDirection.Normalize();
+
+            if (moveDirectionWRTObstacle.y > 0 && moveDistanceWRTObstacle < obstacle.MainPointFactor && moveDistanceWRTObstacle > 0.0f && moveDirection.y < 0.0f)
+            {
+                canMoveOnY = false;
+            }
+            else if (moveDirectionWRTObstacle.y < 0 && moveDistanceWRTObstacle >= (-1 * obstacle.MainPointFactor) && moveDistanceWRTObstacle < 0.0f && moveDirection.y > 0.0f)
+            {
+                canMoveOnY = false;
+            }
+            else
+            {
+                canMoveOnY = true;
+            }
         }
-        else if (moveDirectionWRTObstacle.y < 0 && moveDistanceWRTObstacle >= (-1 * obstacle.MainPointFactor) && moveDistanceWRTObstacle < 0.0f && moveDirection.y > 0.0f)
-        {
-            canMoveOnY = false;
-        }
-        else 
-        {
-            canMoveOnY = true;
-        }
+    
     }
     private void OnTriggerExit(Collider other)
     {
-       canMoveOnY = true;
+        if (other.CompareTag("Obstacle"))
+        {
+            canMoveOnY = true;
+        }
     }
 }
