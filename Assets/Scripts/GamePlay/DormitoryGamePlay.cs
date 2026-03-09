@@ -3,25 +3,30 @@ using UnityEngine;
 
 public class DormitoryGamePlay : MonoBehaviour
 {
-    [SerializeField] Camera mainCamera;
-    [SerializeField] float cameraPanTime;
-    [SerializeField] float cameraSizeTo;
-    [SerializeField] Vector3 cameraPositionTo;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private float cameraPanTime;
+    [SerializeField] private float cameraSizeTo;
+    [SerializeField] private Vector3 cameraPositionTo;
 
-    [SerializeField] Vector3 characterPositionAtSceneBegin;
-    [SerializeField] Vector3 characterPositionAtGameStart;
-    [SerializeField] CharacterControllerCustom characterController;
-    [SerializeField] float timeToBeginScene;
-    [SerializeField] float timeToStartYawnAnimation;
-    [SerializeField] float timeToStartGame;
-    [SerializeField] Obstacle samBed;
-    [SerializeField] Sprite mouseIcon;
+    [SerializeField] private Vector3 characterPositionAtSceneBegin;
+    [SerializeField] private Vector3 characterPositionAtGameStart;
+
+    [SerializeField] private float timeToBeginScene;
+    [SerializeField] private float timeToStartYawnAnimation;
+    [SerializeField] private float timeToStartGame;
+    [SerializeField] private Obstacle samBed;
+
+    [SerializeField] private Sprite mouseIcon;
+    [SerializeField] private Sprite clockIcon;
+
+    [SerializeField] private CharacterControllerCustom characterController;
+    [SerializeField] private Cupboard cupboard;
 
     private GamePlayUI gamePlayUI;
 
     private float cameraOrignalSize;
     private Vector3 cameraOrignalPosition;
-    bool isYawnAnimationPlayed;
+    private bool isYawnAnimationPlayed = true;
 
 
     private void Start()
@@ -31,14 +36,15 @@ public class DormitoryGamePlay : MonoBehaviour
 
     private void BeginScene() 
     {
+        characterController.CanBeControl = false;
         characterController.transform.position = characterPositionAtSceneBegin;
         characterController.AnimatorController.PlaySittingAnimation();
-        //Invoke(nameof(StartYawnAnimation), timeToStartYawnAnimation);
-        Invoke(nameof(PanTheCamera), timeToBeginScene);
+         Invoke(nameof(PanTheCamera), timeToBeginScene);
 
     }
     private void PanTheCamera() 
     {
+        UIManager.GetInstance().ActiveMessagePanel(clockIcon, "", "7:00 AM in the morning", 5.0f);
         isYawnAnimationPlayed = false;
         cameraOrignalSize = mainCamera.orthographicSize;
         cameraOrignalPosition = mainCamera.transform.position;
@@ -93,13 +99,10 @@ public class DormitoryGamePlay : MonoBehaviour
         }
     }
 
-
-
     private void CallbackOnYawnAnimationEnd()
     {
         ZoomTheCamera(mainCamera.gameObject, mainCamera.orthographicSize, cameraOrignalSize, cameraPanTime);
         MovetheCameraToPosition(mainCamera.gameObject, cameraOrignalPosition, cameraPanTime);
-        // Invoke(nameof(StartGameplay), timeToStartGame);
     }
 
     private void StartYawnAnimation() 
@@ -114,7 +117,11 @@ public class DormitoryGamePlay : MonoBehaviour
         characterController.AnimatorController.PlayIdleAnimation();
         characterController.transform.position = characterPositionAtGameStart;
         samBed.ActiveObstacle();
-        UIManager.GetInstance().GetCurrentPanel().GetComponent<GamePlayUI>().CannotPlayLayer.SetActive(false);
+        characterController.CanBeControl = true;
+        OpenCupboard();
     }
-
+    private void OpenCupboard() 
+    {
+        cupboard.OpenDoor(2);
+    }
 }

@@ -24,6 +24,7 @@ public class CharacterControllerCustom : MonoBehaviour
 
 
     #region Move Variables
+    private bool canBeControl = true;
     private Vector3 newMouseInputPosition;
     private Vector3 newPositionTarget;
     private bool canMove = false;
@@ -56,6 +57,7 @@ public class CharacterControllerCustom : MonoBehaviour
 
 
     public AnimatorController AnimatorController => animatorController;
+    public bool CanBeControl { get => canBeControl; set => canBeControl = value; }
 
     void Start()
     {
@@ -68,7 +70,10 @@ public class CharacterControllerCustom : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
+            if (!canBeControl) return;
+
             if (EventSystem.current.IsPointerOverGameObject()) return;
+
             newMouseInputPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             newPositionTarget = newMouseInputPosition;
             newPositionTarget.z = chatacter.position.z;

@@ -1273,12 +1273,14 @@ MonoBehaviour:
   cameraPositionTo: {x: 0, y: -5.5, z: -18}
   characterPositionAtSceneBegin: {x: 0, y: -8.3, z: 0}
   characterPositionAtGameStart: {x: 0, y: -9.5, z: 0}
-  characterController: {fileID: 3099476084375855382}
   timeToBeginScene: 2
   timeToStartYawnAnimation: 2
   timeToStartGame: 2
   samBed: {fileID: 2011639367}
   mouseIcon: {fileID: 21300000, guid: 00710ed4ca405a4459839d894b571640, type: 3}
+  clockIcon: {fileID: 21300000, guid: 79ed071e8c89980478b5be34b692311f, type: 3}
+  characterController: {fileID: 3099476084375855382}
+  cupboard: {fileID: 463753243233217662}
 --- !u!1 &762405975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,7 +3442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4110289393850163921, guid: c062b3388adf533418b75bd18feee20c, type: 3}
       propertyPath: m_Name
-      value: Cupbaord
+      value: Cupboard
       objectReference: {fileID: 0}
     - target: {fileID: 4110289393850163921, guid: c062b3388adf533418b75bd18feee20c, type: 3}
       propertyPath: m_IsActive
@@ -3512,6 +3514,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 119807240}
   m_SourcePrefab: {fileID: 100100000, guid: c062b3388adf533418b75bd18feee20c, type: 3}
+--- !u!114 &463753243233217662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5596365702283260567, guid: c062b3388adf533418b75bd18feee20c, type: 3}
+  m_PrefabInstance: {fileID: 463753243233217661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b11903bcae126948ab8372eda524ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cupboard
 --- !u!1001 &3099476084375855379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3776,6 +3789,10 @@ PrefabInstance:
     - target: {fileID: 6854853632779482125, guid: 2b68dbd81dc602648bb56eef5c46478e, type: 3}
       propertyPath: m_Spacing
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931441471683640603, guid: 2b68dbd81dc602648bb56eef5c46478e, type: 3}
+      propertyPath: m_text
+      value: Heading
       objectReference: {fileID: 0}
     - target: {fileID: 7198672017056482032, guid: 2b68dbd81dc602648bb56eef5c46478e, type: 3}
       propertyPath: m_Name
