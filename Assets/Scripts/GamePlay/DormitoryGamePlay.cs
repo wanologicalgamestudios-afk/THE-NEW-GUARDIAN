@@ -110,10 +110,10 @@ public class DormitoryGamePlay : MonoBehaviour
 
     private void StartGameplay() 
     {
-        UIManager.GetInstance().ActiveMessagePanel(mouseIcon, "Click", "anywhere to move Sam",5.0f);
+        UIManager.GetInstance().ActiveMessagePanel(mouseIcon, "Click", "anywhere to move Sam",3.0f);
         characterController.AnimatorController.PlayIdleAnimation();
         characterController.transform.position = characterPositionAtGameStart;
-        samBed.SetObstacleForNewGame();
+        samBed.ActiveObstacle();
         UIManager.GetInstance().GetCurrentPanel().GetComponent<GamePlayUI>().CannotPlayLayer.SetActive(false);
     }
 

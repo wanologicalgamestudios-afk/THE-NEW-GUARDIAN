@@ -40,7 +40,7 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    public void SetObstacleForNewGame() 
+    public void ActiveObstacle() 
     {
         obstacleCollider.enabled = true;
     }

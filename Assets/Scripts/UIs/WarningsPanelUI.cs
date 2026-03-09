@@ -23,6 +23,8 @@ public class WarningsPanelUI : MonoBehaviour
     private TextMeshProUGUI messageHeadingText;
     [SerializeField]
     private TextMeshProUGUI messageText;
+    [SerializeField]
+    private Image messageIcon;
 
     private void Start()
     {
@@ -54,6 +56,11 @@ public class WarningsPanelUI : MonoBehaviour
         messageAnimator.SetBool("canHide", false);
         messageHeadingText.text = _heading;
         messageText.text = _message;
+        if (_icon != null)
+        {
+            messageIcon.sprite = _icon;
+            messageIcon.SetNativeSize();
+        }
         Invoke(nameof(DisactiveMessage), duration + warningMessageAnimationTime);
     }
     public void DisactiveMessage()
