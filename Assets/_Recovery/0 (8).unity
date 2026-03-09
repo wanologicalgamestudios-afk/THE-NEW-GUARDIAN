@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DormitoryGamePlay
   mainCamera: {fileID: 629540461}
-  cameraPanTime: 1
+  cameraPanTime: 0.5
   cameraSizeTo: 5
   cameraPositionTo: {x: 0, y: -5.5, z: -18}
   characterPositionAtSceneBegin: {x: 0, y: -8.3, z: 0}
