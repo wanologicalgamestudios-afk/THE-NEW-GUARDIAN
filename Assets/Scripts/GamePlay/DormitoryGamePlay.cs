@@ -20,6 +20,7 @@ public class DormitoryGamePlay : MonoBehaviour
 
     private float cameraOrignalSize;
     private Vector3 cameraOrignalPosition;
+    bool isYawnAnimationPlayed;
 
 
     private void Start()
@@ -31,16 +32,17 @@ public class DormitoryGamePlay : MonoBehaviour
     {
         characterController.transform.position = characterPositionAtSceneBegin;
         characterController.AnimatorController.PlaySittingAnimation();
-        Invoke(nameof(StartYawnAnimation), timeToStartYawnAnimation);
-        //Invoke(nameof(PanTheCamera), timeToBeginScene); 
+        //Invoke(nameof(StartYawnAnimation), timeToStartYawnAnimation);
+        Invoke(nameof(PanTheCamera), timeToBeginScene);
+
     }
     private void PanTheCamera() 
     {
+        isYawnAnimationPlayed = false;
         cameraOrignalSize = mainCamera.orthographicSize;
         cameraOrignalPosition = mainCamera.transform.position;
-        ZoomTheCamera(mainCamera.gameObject,cameraOrignalSize, cameraSizeTo, cameraPanTime);
-     
-      //  MovetheCameraToPosition();
+        ZoomTheCamera(mainCamera.gameObject, mainCamera.orthographicSize, cameraSizeTo, cameraPanTime);
+        MovetheCameraToPosition(mainCamera.gameObject, cameraPositionTo, cameraPanTime);
     }
     private void ZoomTheCamera(GameObject _gameObject, float _from, float _to, float _time) 
     {
@@ -48,6 +50,7 @@ public class DormitoryGamePlay : MonoBehaviour
         "from", _from,
         "to", _to,
         "time", _time,
+        "easetype", iTween.EaseType.linear,
         "onupdate", nameof(ZoomTheCameraUpdateMethod),
         "onupdatetarget", this.gameObject,
         "oncomplete", nameof(ZoomTheCameraCompleteMethod),
@@ -61,8 +64,7 @@ public class DormitoryGamePlay : MonoBehaviour
     }
 
     private void ZoomTheCameraCompleteMethod()
-    { 
-       
+    {
     }
 
 
@@ -71,20 +73,37 @@ public class DormitoryGamePlay : MonoBehaviour
         iTween.MoveTo(_gameObject, iTween.Hash(
             "position", _toPosition,
             "time", _moveToTime,
-            "oncomplete", "MoveCompleted",
+            "easetype", iTween.EaseType.linear,
+            "oncomplete", nameof(MovetheCameraCompleted),
             "oncompletetarget", gameObject
             ));
+    }
+
+    private void MovetheCameraCompleted() 
+    {
+        if (!isYawnAnimationPlayed)
+        {
+            Debug.Log("Camera pan completed, starting yawn animation");
+            StartYawnAnimation();
+        }
+        else 
+        {
+            StartGameplay();
+        }
     }
 
 
 
     private void CallbackOnYawnAnimationEnd()
     {
-        Invoke(nameof(StartGameplay), timeToStartGame);
+        ZoomTheCamera(mainCamera.gameObject, mainCamera.orthographicSize, cameraOrignalSize, cameraPanTime);
+        MovetheCameraToPosition(mainCamera.gameObject, cameraOrignalPosition, cameraPanTime);
+        // Invoke(nameof(StartGameplay), timeToStartGame);
     }
 
     private void StartYawnAnimation() 
     {
+        isYawnAnimationPlayed = true;
         characterController.AnimatorController.PlayYawnAnimation(CallbackOnYawnAnimationEnd);
     }
 
